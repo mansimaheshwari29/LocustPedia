@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploading</title>
+    <link rel="stylesheet" href="imagesPage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <img class="logo logo2" src="images/ashok-chakra.jpg" alt="ashokchakra">
+            <img class="logo logo1 " src="images/ISRO logo.jpg" alt="isrologo">
+            <a class="navbar-brand1" href="#">
+                Department of Space<br>
+                Indian Space Research Organisation,<br> Government of India</a>
+            <!-- <a class="navbar-brand" href="#"><b>LocustsPedia</b></a>-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documents">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Map Portal</a>
+                    </li>
+                    
+
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <h1 class=" text-center">Upload images dynamically</h1>
+    <br>
+    <hr>
+    <div>
+        <br>
+        <form class="form-class" action="/uploadImages" method="POST" enctype="multipart/form-data">
+            <label for="target">Choose a type:</label>
+            <select id="target" name="category">
+
+                <option value="" selected hidden disabled>Select...</option>
+                <option value="False Color Composition">False Color Composition</option>
+                <option value="NDVI">NDVI</option>
+                <option value="Locust Breeding Points">Locust Breeding Points</option>
+                <option value="Root Soil Moisture">Root Soil Moisture</option>
+                <option value="Wind Vector">Wind Vector</option>
+                <option value="Accumulated Rainfall">Accumulated Rainfall</option>
+                <option value="Locust Infestation">Locust Infestation</option>
+                <option value="Land Surface Temperature">Land Surface Temperature</option>
+                <option value="Surface Soil Moisture">Surface Soil Moisture</option>
+                <option value="Leaf Index">Leaf Index</option>
+            </select>
+            <div>
+                <label for="name">Image Date</label>
+                <input type="text" id="name" placeholder="Name" value="" name="name" required>
+            </div>
+            <div>
+                <label for="image">Upload Image</label>
+                <input type="file" id="image" name="image" value="" required>
+            </div>
+            <div>
+                <button class="btn-success" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <hr>
+
+</body>
+
+</html>
